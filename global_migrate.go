@@ -40,7 +40,7 @@ func internalRegister(up, down MigrationFunc, skip int) error {
 // 	 "go.mongodb.org/mongo-driver/bson"
 // 	 "go.mongodb.org/mongo-driver/mongo"
 // 	 "go.mongodb.org/mongo-driver/mongo/options"
-// 	 "github.com/metronlab/mongo-migrate"
+// 	 "github.com/jobbox-tech/mongomigrate"
 //  )
 //
 //  func init() {

@@ -1,4 +1,4 @@
-module github.com/metronlab/mongo-migrate
+module github.com/jobbox-tech/mongomigrate
 
 require (
 	github.com/go-stack/stack v1.8.0 // indirect
