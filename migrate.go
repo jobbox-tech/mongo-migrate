@@ -3,6 +3,7 @@ package migrate
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/pkg/errors"
@@ -185,6 +186,7 @@ func (m *Migrate) Up(n int) error {
 
 	for i, p := 0, 0; i < len(m.migrations) && p < n; i++ {
 		migration := m.migrations[i]
+		fmt.Printf("Applying migration name: %s  .... \n", migration.Description)
 		if migration.Version <= currentVersion || migration.Up == nil {
 			continue
 		}
@@ -214,6 +216,7 @@ func (m *Migrate) Down(n int) error {
 
 	for i, p := len(m.migrations)-1, 0; i >= 0 && p < n; i-- {
 		migration := m.migrations[i]
+		fmt.Printf("Applying migration name: %s  .... \n", migration.Description)
 		if migration.Version > currentVersion || migration.Down == nil {
 			continue
 		}
